@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js">
+  </script>
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/themes/ui-lightness/jquery-ui.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js">
+  </script>
+  
+     <style>  
+         .ui-widget-header {  
+            background: blue;  
+            border: 1px solid #DDDDDD;  
+            color: #333333;  
+            font-weight: bold;  
+         }  
+         
+          #tabs-1{font-size: 14px;}  
+         .ui-widget-header {  
+            background:lightpink;  
+            border: 1px solid #b9cd6d;  
+            color: lightyellow;  
+            font-weight: bold;  
+         }  
+      </style>  
+</head>
+<body>
+<div id="dialog-1" title="Movie Title:Psycho (1960)">"A boy's best friend is his mother." </div>  
+      <button id="opener">Open Dialog</button> 
+  <p>Enter Date: <input type="text" id="datepicker-1"></p> 
+<p>accordion tutorials</p>
+<div id="accordion">  
+  <h3>What is Java?</h3>  
+  <div>  
+    <p>  
+   Java is a simple, object oriented, concurrent and general purpose programming language.   
+  Some other important features of java are robust, secure, portable, interactive and high performance.   
+  Java was developed by Sun Microsystems in 1995 since then it has become very popular due to its feature  
+   like platform independent and robust in the case of memory management.  
+    </p>    
+  </div>  
+  <h2>Why is it called platform?</h2>  
+  <div>  
+    <p>  
+   Because java has its own run time environment (JRE) and API so it is called platform.  
+    </p>  
+  </div>  
+  <h2>Where is it used?</h2>  
+  <div>  
+    <p>  
+    According to Sun Microsystems, nearly 3 billion devices run java. Some of these devices   
+   are mobile phones, games, robotics, application in banking sector etc.  
+    </p>  
+  </div>  
+  <h2>Why JavaTpoint</h2>  
+  <div>  
+    <ul>  
+      <li>Life Time Validity</li>  
+      <li>Training by Java Professionals</li>  
+      <li>Get an opportunity to work on real time projects</li>  
+       <li>Interaction with Industry Experts</li>  
+        <li>Small Batches to focus on each student</li>  
+    </ul>  
+  </div>  
+  </div><br>
+  <div class="ui-widget">  
+ <p>Autocomplete tutorials:</p>  
+  <label for="tags">Tags: </label>  
+  <input id="tags">  
+</div> <br>
+<div id="progressbar-1"></div>  <br>
+ <div id="slider-1"></div>   <br>
+ <div id="example">  
+         <input type="text" id="spinner-1" value="0" />  
+      </div> <br>
+       <div id="tabs-1">  
+         <ul>  
+            <li><a href="#tabs-2">Poem</a></li>  
+            <li><a href="#tabs-3">Joke</a></li>  
+            <li><a href="#tabs-4">Quote</a></li>  
+         </ul>  
+         <div id="tabs-2">  
+            <p>Twinkle, twinkle, little star,<br/>  
+How I wonder what you are.<br/>  
+Up above the world so high,<br/>  
+Like a diamond in the sky.<br/>  
+Twinkle, twinkle, little star,<br/>  
+How I wonder what you are!<br/>  
+ </p>  
+         </div>  
+         <div id="tabs-3">  
+<p>Man said to God --- Why did you make women so beautiful?<br/>  
+God said to man --- So that you will love them.<br/>  
+Man said to God --- But why did you make them so dumb?<br/>   
+God said to man --- So that they will love you.<br/> </p>  
+         </div>  
+         <div id="tabs-4">  
+            <p>" The whole secret of existence is to have no fear."  
+Buddha</p>  
+         </div>  
+      </div>  <br>
+      <label for="comment">What is your comment:</label>  
+<input id="tooltip-1" title="We are asking your comment just for feedback"> <br>
+   <script>  
+   
+  $(function() {  
+	  $( "#spinner-1" ).spinner();  
+	  $( "#slider-1" ).slider();  
+	  $( "#progressbar-1" ).progressbar({  
+          value: 80
+       }); 
+	  $( "#dialog-1" ).dialog({  
+          autoOpen: false,    
+       });  
+       $( "#opener" ).click(function() {  
+          $( "#dialog-1" ).dialog( "open" );  
+       }); 
+	  var availableTags = [  
+	      "ActionScript",  
+	      "AppleScript",  
+	      "Asp",  
+	      "BASIC",  
+	      "C",  
+	      "C++",  
+	      "Clojure",  
+	      "COBOL",  
+	      "ColdFusion",  
+	      "Erlang",  
+	      "Fortran",  
+	      "Groovy",  
+	      "Haskell",  
+	      "Java",  
+	      "JavaScript",  
+	      "Lisp",  
+	      "Perl",  
+	      "PHP",  
+	      "Python",  
+	      "Ruby",  
+	      "Scala",  
+	      "Scheme"  
+	    ];  
+	  $("#tags").autocomplete({  
+	      source: availableTags  
+	    });  
+    $( "#accordion" ).accordion();  
+    
+    $(function() {  
+        $( "#datepicker-1" ).datepicker();  
+     }); 
+    
+    $( "#tabs-1" ).tabs(); 
+    
+    $("#tooltip-1").tooltip();  
+  });  
+  </script>
+</body>
+</html>

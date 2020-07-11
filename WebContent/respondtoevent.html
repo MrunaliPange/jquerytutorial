@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>events</title>
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+<p>FaceBook</p>
+
+<p>MicroSoft</p>
+<p> type your name :</p>
+<input id="input"><button type="submit">Submit</button>
+
+<script>
+$(function(){
+	$("p").click(function(){
+		/* $("p").css("background-color","rgba(206, 152, 230, 0.697)"); */});
+		 $("p").mouseover(function(){
+	          $(this).css("background-color","rgba( 189, 132, 214, 0.697 )");
+	          
+	        });
+		  $("p").mouseout(function(){
+	          $(this).css("background-color","");
+	          
+	        });
+		  
+		  $("input").focus(function(){
+			  $(this).css("background-color","rgba( 210, 195, 131, 0.697 )");
+		  });
+		  
+		  $("input").blur(function(){
+	          $(this).css("background-color","#ffffff");
+	        });
+		  
+		  $("input").keyup(function(){
+	          $(this).css("background-color","rgba( 39, 190, 162, 0.697 )");
+	          
+	        } );
+		  
+		  $("#submit").click(function(){
+	          $("#input").css("background-color","#ffffff");
+	          $("#input").val("");
+	        });
+});
+</script>
+</body>
+</html>

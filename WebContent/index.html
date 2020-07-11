@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<style type="text/css">
+.bluebox{
+background-color:lightblue;
+height:100px;
+width:500px;
+}
+
+.yellowbox{
+background-color:yellow;
+height:100px;
+width:500px;
+}
+
+.aquabox{
+background-color:aqua;
+height:100px;
+width:500px;
+}
+</style>
+</head>
+<body>
+<div id="myParagraph"> <h1>JQuery Tutorial </h1></div>
+<div class="bluebox" id="facebook">
+<p>FaceBook</p>
+<a href="http://www.facebook.com"> facebook link</a>
+</div> 
+<br>
+<div class="yellowbox" id="google">
+Google<br>
+<a href="http://www.google.com"> google link</a>
+</div>
+
+<div class="aquabox">
+<p>MicroSoft</p>
+<a href="http:// www.microsoft.com"> microsoft link</a>
+</div>
+<div class="d1" style="border:1px solid black;padding:10px;width:450px">    
+<p><b>This is a little poem: </b><br/>      
+Twinkle, twinkle, little star    
+How I wonder what you are    
+Up above the world so high      
+Like a diamond in the sky<br/>      
+     
+</div> 
+<button id="hide">Hide</button>  <button id="show">Show</button>  <br>
+<button>Toggle</button>
+
+
+<script>
+$(function(){
+$("*").css("font-size","30px");	
+$("div > p").css("text-align","center");		
+$("[href]").css("color","red");
+$("#hide").click(function(){  
+    $("p").hide(); 
+});
+$("#show").click(function(){  
+    $("p").show(); 
+});
+$("button").click(function(){    
+    $("div.d1").toggle();    
+});  
+$("button").click(function(){  
+    $("#div1").fadeIn();  
+    $("#div2").fadeIn("slow");  
+    $("#div3").fadeIn(3000);  
+});  
+});
+</script>
+</body>
+</html>

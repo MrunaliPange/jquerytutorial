@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>html_css</title>
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+<button>Click here to change the content of all p elements</button>  
+<p>This is a paragraph.</p>  
+<p>This is another paragraph.</p>
+<h6></h6>
+<select id="selects">
+ <option>Single</option>    
+  <option>Double</option>    
+ <option>Triple</option>  
+</select>
+<script>
+$(function(){
+	$("button").click(function(){
+		$("p").html("Hello <b>Javatpoint.com</b>");
+		  alert($("p").html());  
+	});
+	
+});
+
+function displayval(){
+	var disval= $("#selects").val();
+	$("h6").html(" value: "+disval);
+}
+$( "select" ).change( displayval );    
+displayval(); 
+</script>
+</body>
+</html>

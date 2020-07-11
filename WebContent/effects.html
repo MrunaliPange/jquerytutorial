@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>effects</title>
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+
+<button>Click to fade in boxes</button><br><br>  
+<div id="div1" style="width:80px;height:80px;display:none;background-color:red;"></div><br>  
+<div id="div2" style="width:80px;height:80px;background-color:green;"></div><br>  
+<div id="div3" style="width:80px;height:3 0px;display:none;background-color:blue;"></div>    
+<div id="flip" style="width:280px;height:80px;background-color:aqua;">Click to slide down panel</div>  
+<div id="panel" style="width:280px;height:80px;display:none;background-color:aqua;">Hello javatpoint.com! 
+It is the best tutorial website to learn jQuery and other languages.</div>  
+
+
+<button id="changeFacebook">
+      Change Facebook text.
+    </button>
+    <button id="changeApple">
+      Change Apple Html.
+    </button>
+    <button id="changeInput">
+      Change Input value.
+    </button>
+    <button id="changeMicrosoft">
+      Change Microsoft.
+    </button>
+    <button id="addText">
+      Add text.
+    </button>
+    <div class="bluebox" id="facebook">
+      <p>
+        Facebook is 
+        <span class="great">
+          great
+        </span>
+        .
+      </p>
+      
+    </div>
+    <div class="yellowbox" id="apple">
+      <p>
+        Apple.
+      </p>
+      
+    </div>
+    <div class="greenbox" id="microsoft">
+      <p id="microsoftParagraph">
+        Microsoft.
+      </p>
+      <p>
+        <a href="http://www.microsoft.com" title="microsoft" id="microsoftLink">
+          Microsoft Link.
+        </a>
+      </p>
+    </div>
+    <p>
+      Enter your name:
+      <input>
+    </p>
+<script>
+$(function(){
+	
+	$("button").click(function(){  
+	    $("#div1").fadeIn(5000);  
+	    $("#div2").fadeOut(6000);  
+	    $("#div3").fadeToggle(1000);  
+	});  
+	
+	 $("#flip").click(function(){
+		//$("#panel").slideDown("slow");  
+		$("#panel").slideToggle("slow");
+	}); 
+	/*   $("#flip").click(function(){  
+	        $("#panel").slideUp("slow");  
+	    });  remove display none from panel*/ 
+	    
+	    $("#changeFacebook").click(function(){
+	        $("#facebook").text("This is facebook.");
+	    });
+	    
+	    $("#changeApple").click(function(){
+	        $("#apple").html("<p>This is Apple</p><p>New IOS available</p>");
+	        
+	      });
+	    
+	    $("#changeInput").click(function(){
+	        $("input").val("Sam");
+	        
+	      });
+	    
+	});
+</script>
+</body>
+</html>
